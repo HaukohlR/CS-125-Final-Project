@@ -5,10 +5,22 @@ public class BackendImplementation implements BackendStuff {
     int roundPoints;
     @Override
     public int[][] generateGrid(int level) {
+        int lvlValue = 20 + level;
+        if (lvlValue > 50) {
+            lvlValue = 50;
+        }
         int[][] grid = new int[5][5];
         for (int k = 0; k < grid.length; k++) {
             for (int i = 0; i < grid[k].length; i++) {
-                int value = (int)(Math.random() * 3);
+                int value = (int)(Math.random() * 100);
+                if (value < lvlValue) {
+                    grid[i][k] = 0;
+                } else if (value < 100 - lvlValue) {
+                    grid[i][k] = 1;
+                } else {
+                    int point = (int) (Math.random() * 2) + 2;
+                    grid[i][k] = point;
+                }
                 grid[i][k] = value;
             }
         }
