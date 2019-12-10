@@ -35,7 +35,7 @@
         android:contentDescription="@string/title_activity_tutorial"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/how_to_play"
-        app:srcCompat="@drawable/I'm so good" />
+        app:srcCompat="@drawable/bomb" />
 
     <Button
         android:id="@+id/MainMenu"
