@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CS 125 Final Project</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+</resources>
