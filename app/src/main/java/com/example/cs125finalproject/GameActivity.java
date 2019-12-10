@@ -3,14 +3,25 @@ package com.example.cs125finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.io.IOException;
 
 public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
+            playMusic();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         setContentView(R.layout.activity_game);
         Button button1 = findViewById(R.id.button);
         Button button2 = findViewById(R.id.button2);
@@ -37,6 +48,19 @@ public class GameActivity extends AppCompatActivity {
         Button button23 = findViewById(R.id.button23);
         Button button24 = findViewById(R.id.button24);
         Button button25 = findViewById(R.id.button25);
+
+        TextView column1 = findViewById(R.id.textView2);
+        TextView column2 = findViewById(R.id.textView8);
+        TextView column3 = findViewById(R.id.textView4);
+        TextView column4 = findViewById(R.id.textView5);
+        TextView column5 = findViewById(R.id.textView6);
+        TextView row1 = findViewById(R.id.textView7);
+        TextView row2 = findViewById(R.id.textView9);
+        TextView row3 = findViewById(R.id.textView10);
+        TextView row4 = findViewById(R.id.textView11);
+        TextView row5 = findViewById(R.id.textView12);
+
+
         button1.setOnClickListener(unused -> button1.setText("1"));
         button2.setOnClickListener(unused -> button2.setText("1"));
         button3.setOnClickListener(unused -> button3.setText("1"));
@@ -62,5 +86,21 @@ public class GameActivity extends AppCompatActivity {
         button23.setOnClickListener(unused -> button23.setText("1"));
         button24.setOnClickListener(unused -> button24.setText("1"));
         button25.setOnClickListener(unused -> button25.setText("1"));
+    }
+    public void playMusic() throws IOException {
+        String url = "http://www.youtube.com/watch?v=cpYjrr-SZuI";
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        try {
+            mediaPlayer.setDataSource(url);
+        } catch (IOException e) {
+            try {
+                throw new IOException();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        mediaPlayer.prepare();
+        mediaPlayer.start();
     }
 }
