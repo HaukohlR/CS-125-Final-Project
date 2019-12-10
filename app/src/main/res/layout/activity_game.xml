@@ -7,6 +7,19 @@
     tools:context=".GameActivity">
 
     <TextView
+        android:id="@+id/gameOver"
+        android:layout_width="256dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="550dp"
+        android:text="GAME OVER"
+        android:textSize="40sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="128dp"
         android:layout_height="64dp"

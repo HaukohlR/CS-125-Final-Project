@@ -1,8 +1,6 @@
 package com.example.cs125finalproject;
 
 public class BackendImplementation implements BackendStuff {
-    int totalPoints;
-    int roundPoints;
     @Override
     public int[][] generateGrid(int level) {
         int lvlValue = 20 + level;
