@@ -3,14 +3,24 @@ package com.example.cs125finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
+
+import java.io.IOException;
 
 public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
+            playMusic();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         setContentView(R.layout.activity_game);
         Button button1 = findViewById(R.id.button);
         Button button2 = findViewById(R.id.button2);
@@ -62,5 +72,21 @@ public class GameActivity extends AppCompatActivity {
         button23.setOnClickListener(unused -> button23.setText("1"));
         button24.setOnClickListener(unused -> button24.setText("1"));
         button25.setOnClickListener(unused -> button25.setText("1"));
+    }
+    public void playMusic() throws IOException {
+        String url = "http://www.youtube.com/watch?v=cpYjrr-SZuI";
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        try {
+            mediaPlayer.setDataSource(url);
+        } catch (IOException e) {
+            try {
+                throw new IOException();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        mediaPlayer.prepare();
+        mediaPlayer.start();
     }
 }
