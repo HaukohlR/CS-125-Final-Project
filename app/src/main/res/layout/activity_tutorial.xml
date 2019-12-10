@@ -16,6 +16,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="368dp"
+        android:text="This is how you play, This is how you play the game. Every square has a number from 0-3 inside it. Your point total starts at 0 and the first number you flip is added to it. All following numbers are multiplied to your score. This means that any 0's that you flip result in a game over. Once all numbers greater than 1 are flipped, you will continue to the next level. The first number by a row or column indicate the total number of points in that respective row or column The second number represents the amount of bombs."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -35,4 +36,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/how_to_play"
         app:srcCompat="@drawable/I'm so good" />
+
+    <Button
+        android:id="@+id/MainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="29dp"
+        android:text="Back To Main Menu"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/how_to_play"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

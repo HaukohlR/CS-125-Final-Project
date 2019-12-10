@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button createGame = findViewById(R.id.newGameButton);
         createGame.setOnClickListener(unused -> startActivity(new Intent(this, GameActivity.class)));
+
+        Button tutorial = findViewById(R.id.how2playbutton);
+        tutorial.setOnClickListener(unused -> startActivity(new Intent(this, TutorialActivity.class)));
     }
     public void playMusic() throws IOException {
         String url = "http://www.youtube.com/watch?v=cpYjrr-SZuI";

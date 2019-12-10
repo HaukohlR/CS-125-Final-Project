@@ -2,7 +2,9 @@ package com.example.cs125finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class TutorialActivity extends AppCompatActivity {
@@ -20,5 +22,7 @@ public class TutorialActivity extends AppCompatActivity {
                 "level. The first number by a row or column indicate the total number of points in " +
                 "that respective row or column The second number represents the amount of bombs.");
 
+        Button back = findViewById(R.id.MainMenu);
+        back.setOnClickListener(unused -> startActivity(new Intent(this, MainActivity.class)));
     }
 }
