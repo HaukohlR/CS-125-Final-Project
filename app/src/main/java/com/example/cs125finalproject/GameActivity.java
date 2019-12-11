@@ -214,6 +214,7 @@ public class GameActivity extends AppCompatActivity {
         } catch (Exception e){
             e.printStackTrace();
         }
-        startActivity(new Intent(this, MainActivity.class));
+        TextView back = findViewById(R.id.textView3);
+        back.setVisibility(View.VISIBLE);
     }
 }
