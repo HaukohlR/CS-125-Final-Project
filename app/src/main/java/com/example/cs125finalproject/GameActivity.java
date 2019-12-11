@@ -53,11 +53,13 @@ public class GameActivity extends AppCompatActivity {
 
         level = 1;
         helper = new BackendImplementation();
-        try {
+ /*       try {
             playMusic();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+  */
         setContentView(R.layout.activity_game);
         button1 = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
@@ -95,6 +97,8 @@ public class GameActivity extends AppCompatActivity {
         TextView row3 = findViewById(R.id.textView10);
         TextView row4 = findViewById(R.id.textView11);
         TextView row5 = findViewById(R.id.textView12);
+
+        
 
         newRound();
 
@@ -196,7 +200,7 @@ public class GameActivity extends AppCompatActivity {
         }
         startActivity(new Intent(this, MainActivity.class));
     }
-    public void playMusic() throws IOException {
+ /*   public void playMusic() throws IOException {
         String url = "http://www.youtube.com/watch?v=cpYjrr-SZuI";
         MediaPlayer mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -212,4 +216,6 @@ public class GameActivity extends AppCompatActivity {
         mediaPlayer.prepare();
         mediaPlayer.start();
     }
+
+  */
 }
