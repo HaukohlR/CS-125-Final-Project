@@ -17,7 +17,7 @@ public class GameActivity extends AppCompatActivity {
     private int[][] grid;
     private int[] buttonNums;
     private boolean[] clicked;
-    private int roundPoints;
+    private int roundPoints = 1;
     private int level;
     private BackendImplementation helper;
     Button button1;
@@ -103,17 +103,17 @@ public class GameActivity extends AppCompatActivity {
         int[] rowPoints = helper.calculatePointsRows(grid);
         int[] rowBombs = helper.calculateBombsRows(grid);
 
-        column1.setText(String.valueOf(colPoints[0]) + " " + String.valueOf(colBombs[0]));
-        column2.setText(String.valueOf(colPoints[1]) + " " + String.valueOf(colBombs[1]));
-        column3.setText(String.valueOf(colPoints[2]) + " " + String.valueOf(colBombs[2]));
-        column4.setText(String.valueOf(colPoints[3]) + " " + String.valueOf(colBombs[3]));
-        column5.setText(String.valueOf(colPoints[4]) + " " + String.valueOf(colBombs[4]));
+        column1.setText(String.valueOf(colPoints[0]) + "-" + String.valueOf(colBombs[0]));
+        column2.setText(String.valueOf(colPoints[1]) + "-" + String.valueOf(colBombs[1]));
+        column3.setText(String.valueOf(colPoints[2]) + "-" + String.valueOf(colBombs[2]));
+        column4.setText(String.valueOf(colPoints[3]) + "-" + String.valueOf(colBombs[3]));
+        column5.setText(String.valueOf(colPoints[4]) + "-" + String.valueOf(colBombs[4]));
 
-        row1.setText(String.valueOf(rowPoints[0]) + " " + String.valueOf(rowBombs[0]));
-        row2.setText(String.valueOf(rowPoints[1]) + " " + String.valueOf(rowBombs[1]));
-        row3.setText(String.valueOf(rowPoints[2]) + " " + String.valueOf(rowBombs[2]));
-        row4.setText(String.valueOf(rowPoints[3]) + " " + String.valueOf(rowBombs[3]));
-        row5.setText(String.valueOf(rowPoints[4]) + " " + String.valueOf(rowBombs[4]));
+        row1.setText(String.valueOf(rowPoints[0]) + "-" + String.valueOf(rowBombs[0]));
+        row2.setText(String.valueOf(rowPoints[1]) + "-" + String.valueOf(rowBombs[1]));
+        row3.setText(String.valueOf(rowPoints[2]) + "-" + String.valueOf(rowBombs[2]));
+        row4.setText(String.valueOf(rowPoints[3]) + "-" + String.valueOf(rowBombs[3]));
+        row5.setText(String.valueOf(rowPoints[4]) + "-" + String.valueOf(rowBombs[4]));
 
 
 
@@ -146,6 +146,7 @@ public class GameActivity extends AppCompatActivity {
     public String buttonClick(int buttonNumber) {
         if (!clicked[buttonNumber]) {
             roundPoints *= buttonNums[buttonNumber];
+            rPoints.setText(String.valueOf(roundPoints));
             if (buttonNums[buttonNumber] == 0) {
                 gameOver();
             }
