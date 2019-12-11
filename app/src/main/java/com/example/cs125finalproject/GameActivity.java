@@ -209,11 +209,13 @@ public class GameActivity extends AppCompatActivity {
     public void gameOver() {
         TextView gameOver = findViewById(R.id.gameOver);
         gameOver.setVisibility(View.VISIBLE);
-        try {
+ /*       try {
             Thread.sleep(10000);
         } catch (Exception e){
             e.printStackTrace();
         }
+
+  */
         TextView back = findViewById(R.id.textView3);
         back.setVisibility(View.VISIBLE);
     }
