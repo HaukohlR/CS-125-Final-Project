@@ -17,7 +17,6 @@ public class GameActivity extends AppCompatActivity {
     private int[][] grid;
     private int[] buttonNums;
     private boolean[] clicked;
-    private int totalPoints;
     private int roundPoints;
     private int level;
     private BackendImplementation helper;
@@ -47,19 +46,15 @@ public class GameActivity extends AppCompatActivity {
     Button button24;
     Button button25;
 
+    TextView rPoints;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         level = 1;
         helper = new BackendImplementation();
- /*       try {
-            playMusic();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-  */
         setContentView(R.layout.activity_game);
         button1 = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
@@ -98,9 +93,15 @@ public class GameActivity extends AppCompatActivity {
         TextView row4 = findViewById(R.id.textView11);
         TextView row5 = findViewById(R.id.textView12);
 
-        
+        rPoints = findViewById(R.id.totalPnts);
+
 
         newRound();
+
+        int[] colPoints = helper.calculatePointsColumns(grid);
+        int[] colBombs = helper.calculateBombsColumns(grid);
+
+
 
         button1.setOnClickListener(unused -> button1.setText(buttonClick(1)));
         button2.setOnClickListener(unused -> button2.setText(buttonClick(2)));
@@ -200,22 +201,4 @@ public class GameActivity extends AppCompatActivity {
         }
         startActivity(new Intent(this, MainActivity.class));
     }
- /*   public void playMusic() throws IOException {
-        String url = "http://www.youtube.com/watch?v=cpYjrr-SZuI";
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-        try {
-            mediaPlayer.setDataSource(url);
-        } catch (IOException e) {
-            try {
-                throw new IOException();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-        mediaPlayer.prepare();
-        mediaPlayer.start();
-    }
-
-  */
 }

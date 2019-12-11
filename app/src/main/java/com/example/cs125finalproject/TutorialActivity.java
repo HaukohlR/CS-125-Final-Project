@@ -22,7 +22,6 @@ public class TutorialActivity extends AppCompatActivity {
                 "level. The first number by a row or column indicate the total number of points in " +
                 "that respective row or column The second number represents the amount of bombs.");
 
-        Button back = findViewById(R.id.MainMenu);
-        back.setOnClickListener(unused -> startActivity(new Intent(this, MainActivity.class)));
+
     }
 }

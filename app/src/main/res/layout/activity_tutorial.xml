@@ -37,17 +37,15 @@
         app:layout_constraintTop_toBottomOf="@+id/how_to_play"
         app:srcCompat="@drawable/bomb" />
 
-    <Button
-        android:id="@+id/MainMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginLeft="123dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="29dp"
-        android:text="Back To Main Menu"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="174dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginBottom="21dp"
+        android:text="Press the Back Button to return to the Main Menu"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/how_to_play"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
