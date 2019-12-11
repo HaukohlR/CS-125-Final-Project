@@ -53,8 +53,6 @@ public class GameActivity extends AppCompatActivity {
 
         level = 1;
         helper = new BackendImplementation();
-        newRound();
-
         try {
             playMusic();
         } catch (IOException e) {
@@ -98,32 +96,33 @@ public class GameActivity extends AppCompatActivity {
         TextView row4 = findViewById(R.id.textView11);
         TextView row5 = findViewById(R.id.textView12);
 
-
+        newRound();
+        
         button1.setOnClickListener(unused -> button1.setText(buttonClick(1)));
-        button2.setOnClickListener(unused -> button1.setText(buttonClick(2)));
-        button3.setOnClickListener(unused -> button1.setText(buttonClick(3)));
-        button4.setOnClickListener(unused -> button1.setText(buttonClick(4)));
-        button5.setOnClickListener(unused -> button1.setText(buttonClick(5)));
-        button6.setOnClickListener(unused -> button1.setText(buttonClick(6)));
-        button7.setOnClickListener(unused -> button1.setText(buttonClick(7)));
-        button8.setOnClickListener(unused -> button1.setText(buttonClick(8)));
-        button9.setOnClickListener(unused -> button1.setText(buttonClick(9)));
-        button10.setOnClickListener(unused -> button1.setText(buttonClick(10)));
-        button11.setOnClickListener(unused -> button1.setText(buttonClick(11)));
-        button12.setOnClickListener(unused -> button1.setText(buttonClick(12)));
-        button13.setOnClickListener(unused -> button1.setText(buttonClick(13)));
-        button14.setOnClickListener(unused -> button1.setText(buttonClick(14)));
-        button15.setOnClickListener(unused -> button1.setText(buttonClick(15)));
-        button16.setOnClickListener(unused -> button1.setText(buttonClick(16)));
-        button17.setOnClickListener(unused -> button1.setText(buttonClick(17)));
-        button18.setOnClickListener(unused -> button1.setText(buttonClick(18)));
-        button19.setOnClickListener(unused -> button1.setText(buttonClick(19)));
-        button20.setOnClickListener(unused -> button1.setText(buttonClick(20)));
-        button21.setOnClickListener(unused -> button1.setText(buttonClick(21)));
-        button22.setOnClickListener(unused -> button1.setText(buttonClick(22)));
-        button23.setOnClickListener(unused -> button1.setText(buttonClick(23)));
-        button24.setOnClickListener(unused -> button1.setText(buttonClick(24)));
-        button25.setOnClickListener(unused -> button1.setText(buttonClick(25)));
+        button2.setOnClickListener(unused -> button2.setText(buttonClick(2)));
+        button3.setOnClickListener(unused -> button3.setText(buttonClick(3)));
+        button4.setOnClickListener(unused -> button4.setText(buttonClick(4)));
+        button5.setOnClickListener(unused -> button5.setText(buttonClick(5)));
+        button6.setOnClickListener(unused -> button6.setText(buttonClick(6)));
+        button7.setOnClickListener(unused -> button7.setText(buttonClick(7)));
+        button8.setOnClickListener(unused -> button8.setText(buttonClick(8)));
+        button9.setOnClickListener(unused -> button9.setText(buttonClick(9)));
+        button10.setOnClickListener(unused -> button10.setText(buttonClick(10)));
+        button11.setOnClickListener(unused -> button11.setText(buttonClick(11)));
+        button12.setOnClickListener(unused -> button12.setText(buttonClick(12)));
+        button13.setOnClickListener(unused -> button13.setText(buttonClick(13)));
+        button14.setOnClickListener(unused -> button14.setText(buttonClick(14)));
+        button15.setOnClickListener(unused -> button15.setText(buttonClick(15)));
+        button16.setOnClickListener(unused -> button16.setText(buttonClick(16)));
+        button17.setOnClickListener(unused -> button17.setText(buttonClick(17)));
+        button18.setOnClickListener(unused -> button18.setText(buttonClick(18)));
+        button19.setOnClickListener(unused -> button19.setText(buttonClick(19)));
+        button20.setOnClickListener(unused -> button20.setText(buttonClick(20)));
+        button21.setOnClickListener(unused -> button21.setText(buttonClick(21)));
+        button22.setOnClickListener(unused -> button22.setText(buttonClick(22)));
+        button23.setOnClickListener(unused -> button23.setText(buttonClick(23)));
+        button24.setOnClickListener(unused -> button24.setText(buttonClick(24)));
+        button25.setOnClickListener(unused -> button25.setText(buttonClick(25)));
     }
     public String buttonClick(int buttonNumber) {
         if (!clicked[buttonNumber]) {
