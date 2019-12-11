@@ -19,7 +19,6 @@ public class BackendImplementation implements BackendStuff {
                     int point = (int) (Math.random() * 2) + 2;
                     grid[i][k] = point;
                 }
-                grid[i][k] = value;
             }
         }
         return grid;

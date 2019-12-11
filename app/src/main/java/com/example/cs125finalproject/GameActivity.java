@@ -97,7 +97,7 @@ public class GameActivity extends AppCompatActivity {
         TextView row5 = findViewById(R.id.textView12);
 
         newRound();
-        
+
         button1.setOnClickListener(unused -> button1.setText(buttonClick(1)));
         button2.setOnClickListener(unused -> button2.setText(buttonClick(2)));
         button3.setOnClickListener(unused -> button3.setText(buttonClick(3)));
